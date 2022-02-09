@@ -1,8 +1,8 @@
 <?php
 
-include("chilkat_9_5_0.php");
+require __DIR__.'/../autoload.php';
 
-$crypt = new CkCrypt2();
+$crypt = new \AgileBM\Chilkat\CkCrypt2();
 
 $success = $crypt->UnlockComponent('Anything for 30-day trial');
 if ($success != true) {
@@ -55,6 +55,3 @@ print $encStr . "\n";
 //  Now decrypt:
 $decStr = $crypt->decryptStringENC($encStr);
 print $decStr . "\n";
-
-?>
-
