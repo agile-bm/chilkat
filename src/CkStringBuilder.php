@@ -177,6 +177,10 @@ class CkStringBuilder {
 		return CkStringBuilder_encoded($this->_cPtr,$encoding,$charset);
 	}
 
+	function getHash($algorithm,$encoding,$charset) {
+		return CkStringBuilder_getHash($this->_cPtr,$algorithm,$encoding,$charset);
+	}
+
 	function getNth($index,$delimiterChar,$exceptDoubleQuoted,$exceptEscaped) {
 		return CkStringBuilder_getNth($this->_cPtr,$index,$delimiterChar,$exceptDoubleQuoted,$exceptEscaped);
 	}
